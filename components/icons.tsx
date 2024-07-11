@@ -32,11 +32,9 @@ export const LinkedInIcon: React.FC<IconSvgProps> = ({
 }) => {
   return (
     <svg
-      clipRule={'evenodd'}
       height={size || height}
-      viewBox='0 0 24 24'
+      viewBox='0 0 26 28'
       width={size || width}
-      xmlns='http://www.w3.org/2000/svg'
       {...props}
     >
       <path

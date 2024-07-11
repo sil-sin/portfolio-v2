@@ -2,9 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer utilities {
+    .bg-gradient-to-transparent-light {
+        background-image: linear-gradient(to bottom, theme('colors.lightBackground'), transparent);
+    }
 
+    .dark .bg-gradient-to-transparent-dark {
+        background-image: linear-gradient(to top, theme('colors.darkBackground'), transparent 20%);
+
+    }
+
+} */
+
+/* bubble background styles  */
 .area {
-    @apply absolute h-fill-available w-full overflow-hidden bg-transparent;
+    @apply absolute w-full overflow-hidden bg-transparent;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 0;
 }
 
 .circles {
@@ -12,7 +27,7 @@
 }
 
 .circles li {
-    @apply absolute block bg-gray-500 dark:bg-slate-200 bg-opacity-20 dark:opacity-50 rounded-full;
+    @apply absolute block bg-gray-500 dark:bg-slate-200 bg-opacity-20 dark:opacity-50 rounded-full shadow-small;
     animation: move 25s linear infinite;
     bottom: -150px;
 }
