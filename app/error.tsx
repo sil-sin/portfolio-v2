@@ -1,24 +1,25 @@
-"use client";
+'use client'
 
-import { useEffect } from "react";
+import { useEffect } from 'react'
 
 export default function Error({
   error,
   reset,
 }: {
-  error: Error;
-  reset: () => void;
+  error: Error
+  reset: () => void
 }) {
   useEffect(() => {
     // Log the error to an error reporting service
     /* eslint-disable no-console */
-    console.error(error);
-  }, [error]);
+    console.error(error)
+  }, [error])
 
   return (
     <div>
       <h2>Something went wrong!</h2>
       <button
+        className='bg-primary hover:bg-primary/80 text-white rounded-lg px-4 py-2 z-10'
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()
@@ -27,5 +28,5 @@ export default function Error({
         Try again
       </button>
     </div>
-  );
+  )
 }

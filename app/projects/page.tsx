@@ -1,31 +1,24 @@
+'use client'
 import { title } from '@/components/primitives'
-import { Css3Icon, Html5Icon, JSIcon } from '@/components/techIcons'
+import ProjectCard from '@/components/projects/project-card'
 import { projects } from '@/config/projects'
 
 export default function ProjectsPage() {
   return (
-    <div>
+    <div className='min-w-vw box-border flex flex-col items-stretch gap-10'>
       <h1 className={title()}>Docs</h1>
-      <Html5Icon />
-      <Css3Icon />
-      <JSIcon />
 
-      {projects.map((project) => {
-        return (
-          <div key={project.name} className='flex-col my-10'>
-            <h3 className='font-bold text-primary'>{project.name}</h3>
-            <p>{project.description}</p>
-            <a href={project.link}> Demo </a>
-            {project.githubRepos.map((repo, i) => {
-              return (
-                <a key={i + repo.length} href={repo + (i === 0 ? '' : i)}>
-                  Github repo
-                </a>
-              )
-            })}
-          </div>
-        )
-      })}
+      <div className='w-full max-w-5xl flex flex-wrap justify-center gap-10'>
+        {projects.map((project) => (
+          // eslint-disable-next-line react/jsx-key
+          <ProjectCard
+            image={''}
+            projectUrl={''}
+            title={project.name}
+            {...project}
+          />
+        ))}
+      </div>
     </div>
   )
 }

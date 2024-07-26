@@ -13,7 +13,7 @@ import NextLink from 'next/link'
 import clsx from 'clsx'
 
 import { siteConfig } from '@/config/site'
-import { ThemeSwitch } from '@/components/theme-switch'
+import { ThemeSwitch } from '@/components/themeSwitch'
 import { GithubIcon, LinkedInIcon, Logo } from '@/components/icons'
 
 export const Navbar = () => {
@@ -44,14 +44,11 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent
-        className='md:hidden sm:flex basis-1/5 sm:basis-full'
-        justify='end'
-      >
-        <NavbarItem className='hidden sm:flex gap-2'>
+      <NavbarContent className='flex basis-full' justify='end'>
+        <NavbarItem className=' flex gap-2'>
           <Link
             isExternal
-            aria-label='Discord'
+            aria-label='Linkedin'
             href={siteConfig.links.linkedin}
           >
             <LinkedInIcon className='text-default-500' />
@@ -61,24 +58,14 @@ export const Navbar = () => {
           </Link>
           <ThemeSwitch />
         </NavbarItem>
-        <NavbarMenuToggle className='md:hidden' />
+        <NavbarMenuToggle className=' md:hidden' />
       </NavbarContent>
 
       <NavbarMenu>
         <div className='mx-4 mt-2 flex flex-col gap-2'>
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? 'primary'
-                    : index === siteConfig.navItems.length - 1
-                    ? 'danger'
-                    : 'foreground'
-                }
-                href={item.href}
-                size='lg'
-              >
+              <Link color={'foreground'} href={item.href} size='lg'>
                 {item.label}
               </Link>
             </NavbarMenuItem>

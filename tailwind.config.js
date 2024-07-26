@@ -11,7 +11,6 @@ module.exports = {
     extend: {
       height: {
         'fill-available': '-webkit-fill-available',
-
       },
       colors: {
         'lightBackground': "#6b7280", /* fallback for old browsers */

@@ -16,6 +16,40 @@ export const projects: Project[] = [
         icon: Html5Icon,
       },
       {
+        name: 'PayPal',
+        icon: Css3Icon,
+      },
+      {
+        name: 'TypeScript',
+        icon: JSIcon,
+      },
+      {
+        name: 'Contentful',
+        icon: Css3Icon,
+      },
+      {
+        name: 'React',
+        icon: JSIcon,
+      },
+      {
+        name: 'Vercel',
+        icon: JSIcon,
+      },
+    ],
+  },
+  {
+    name: 'Baby shower',
+    description:
+      'A baby shower application. It allows you to RSVP for th baby shower, send messages and reserve the gift you want to buy from the list of options. It also allows you to share it with your friends and family.',
+    link: 'https://babyshower-eta.vercel.app/',
+    githubRepos: ['https://github.com/sil-sin/Portfolio'],
+    img: '/silvisinanaj.png',
+    tech: [
+      {
+        name: 'Next.js',
+        icon: JSIcon,
+      },
+      {
         name: 'Tailwind CSS',
         icon: Css3Icon,
       },

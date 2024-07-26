@@ -15,7 +15,7 @@ export const Hero = () => {
       style={{ position: 'relative' }}
     >
       <Background />
-      <div className='inline-block max-w-lg text-center justify-center'>
+      <div className='inline-block max-w-lg text-center justify-star'>
         <h1 className='text-5xl font-bold'>
           Hi there I&apos;m <span className='text-primary'>Sil</span>
         </h1>
