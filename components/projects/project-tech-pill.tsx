@@ -8,7 +8,11 @@ type Props = {
 export const ProjectTechPill: FC<Props> = ({ icon: Icon, techName }) => {
   return (
     <div>
-      <Chip color='warning' startContent={<Icon size={16} />} variant='flat'>
+      <Chip
+        color='warning'
+        startContent={<Icon alt={techName} area-label={techName} size={16} />}
+        variant='flat'
+      >
         <small className='text-default-500 '>{techName}</small>
       </Chip>
     </div>
