@@ -1,6 +1,6 @@
 'use client'
 import { title } from '@/components/primitives'
-import ProjectCard from '@/components/projects/project-card'
+import ProjectCard from '@/components/projects/projectCard'
 import { projects } from '@/config/projects'
 
 export default function ProjectsPage() {
