@@ -6,7 +6,7 @@ import { Link } from '@nextui-org/link'
 
 import { AnchorIcon } from '../icons'
 
-import { ProjectTechPill } from './project-tech-pill'
+import { ProjectTechPill } from './projectTechPill'
 
 import { GithubRepos, Technology } from '@/types'
 
@@ -28,7 +28,7 @@ const ProjectCard: FC<Props> = ({
   alternativeLink,
 }) => {
   return (
-    <Card className='py-4 sm:w-60 w-full gap-4  m-8 sm:mx-auto'>
+    <Card className='py-4 sm:w-60 w-full gap-4 sm:mx-auto'>
       <CardHeader className='pb-0 pt-2 px-4 flex-col gap-1 items-start min-h-16'>
         <Link
           className='text-lg dark:text-white text-black'

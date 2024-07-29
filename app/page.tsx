@@ -3,6 +3,7 @@
 import { Hero } from '@/components/hero'
 import { subtitle } from '@/components/primitives'
 import ProjectCard from '@/components/projects/projectCard'
+import { TechnologyBar } from '@/components/technologyBar'
 import { projects } from '@/config/projects'
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
           />
         ))}
       </div>
+      <TechnologyBar />
     </section>
   )
 }
