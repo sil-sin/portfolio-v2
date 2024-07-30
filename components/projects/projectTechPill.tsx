@@ -17,7 +17,7 @@ export const ProjectTechPill: FC<Props> = ({
   size = 'sm',
 }) => {
   return (
-    <div>
+    <>
       <MyChip
         className={variant === 'faded' ? 'animate-fade-in' : ''}
         color='warning'
@@ -29,6 +29,6 @@ export const ProjectTechPill: FC<Props> = ({
       >
         <small className='text-default-500 '>{techName}</small>
       </MyChip>
-    </div>
+    </>
   )
 }
