@@ -1,22 +1,25 @@
-import { GithubIcon } from '@/components/icons'
-import {
-  ContentfulIcon,
-  Css3Icon,
-  ExpressJsIcon,
-  GoogleCloudIcon,
-  HandlebarsIcon,
-  Html5Icon,
-  JestIcon,
-  JSIcon,
-  MaterialUIIcon,
-  MongoDbIcon,
-  NextJSIcon,
-  NodeJSIcon,
-  ReactIcon,
-  TypeScriptIcon,
-  VercelIcon,
-} from '@/components/techIcons'
+import { technology } from './technology'
+
 import { Project } from '@/types'
+
+const {
+  HTML,
+  CSS,
+  JavaScript,
+  TypeScript,
+  ReactJS,
+  NextJS,
+  NodeJS,
+  MongoDB,
+  Vercel,
+  Jest,
+  Contentful,
+  MaterialUI,
+  ExpressJS,
+  GoogleCloud,
+  Handlebars,
+  GitHub,
+} = technology
 
 export const projects: Project[] = [
   {
@@ -29,42 +32,15 @@ export const projects: Project[] = [
     ],
     img: '/discover-berat.png',
     tech: [
-      {
-        name: 'React',
-        icon: ReactIcon,
-      },
-      {
-        name: 'Next.js',
-        icon: NextJSIcon,
-      },
-      {
-        name: 'TypeScript',
-        icon: TypeScriptIcon,
-      },
-      {
-        name: 'Contentful',
-        icon: ContentfulIcon,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Icon,
-      },
-      {
-        name: 'Jest',
-        icon: JestIcon,
-      },
-      {
-        name: 'Vercel',
-        icon: VercelIcon,
-      },
-      {
-        name: 'GitHub',
-        icon: GithubIcon,
-      },
-      {
-        name: 'Google Cloud',
-        icon: GoogleCloudIcon,
-      },
+      ReactJS,
+      NextJS,
+      TypeScript,
+      Contentful,
+      CSS,
+      Jest,
+      Vercel,
+      GitHub,
+      GoogleCloud,
     ],
   },
   {
@@ -89,38 +65,14 @@ export const projects: Project[] = [
     ],
     img: '/silvisinanaj.png',
     tech: [
-      {
-        name: 'React.js',
-        icon: ReactIcon,
-      },
-      {
-        name: 'JavaScript',
-        icon: JSIcon,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Icon,
-      },
-      {
-        name: 'Vercel',
-        icon: VercelIcon,
-      },
-      {
-        name: 'GitHub',
-        icon: GithubIcon,
-      },
-      {
-        name: 'Node.js',
-        icon: NodeJSIcon,
-      },
-      {
-        name: 'MongoDB',
-        icon: MongoDbIcon,
-      },
-      {
-        name: 'Express.js',
-        icon: ExpressJsIcon,
-      },
+      ReactJS,
+      JavaScript,
+      CSS,
+      Vercel,
+      GitHub,
+      NodeJS,
+      MongoDB,
+      ExpressJS,
     ],
   },
   {
@@ -132,32 +84,7 @@ export const projects: Project[] = [
       { name: 'Github Repo', link: 'https://github.com/sil-sin/Portfolio' },
     ],
     img: '/silvisinanaj.png',
-    tech: [
-      {
-        name: 'React.js',
-        icon: ReactIcon,
-      },
-      {
-        name: 'Material UI',
-        icon: MaterialUIIcon,
-      },
-      {
-        name: 'JavaScript',
-        icon: JSIcon,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Icon,
-      },
-      {
-        name: 'Vercel',
-        icon: VercelIcon,
-      },
-      {
-        name: 'GitHub',
-        icon: GithubIcon,
-      },
-    ],
+    tech: [ReactJS, MaterialUI, JavaScript, CSS, Vercel, GitHub],
   },
   {
     name: 'FoodCafé',
@@ -172,42 +99,15 @@ export const projects: Project[] = [
     ],
     img: '/foodcafe.png',
     tech: [
-      {
-        name: 'React.js',
-        icon: ReactIcon,
-      },
-      {
-        name: 'Material UI',
-        icon: MaterialUIIcon,
-      },
-      {
-        name: 'JavaScript',
-        icon: JSIcon,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Icon,
-      },
-      {
-        name: 'Node.js',
-        icon: NodeJSIcon,
-      },
-      {
-        name: 'MongoDB',
-        icon: MongoDbIcon,
-      },
-      {
-        name: 'Express.js',
-        icon: ExpressJsIcon,
-      },
-      {
-        name: 'Vercel',
-        icon: VercelIcon,
-      },
-      {
-        name: 'GitHub',
-        icon: GithubIcon,
-      },
+      ReactJS,
+      MaterialUI,
+      JavaScript,
+      CSS,
+      NodeJS,
+      MongoDB,
+      ExpressJS,
+      Vercel,
+      GitHub,
     ],
   },
   {
@@ -218,36 +118,7 @@ export const projects: Project[] = [
       { name: 'Github Repo', link: 'https://github.com/sil-sin/Silver-Tasker' },
     ],
     img: '/silver-tasker.png',
-    tech: [
-      {
-        name: 'Node.js',
-        icon: NodeJSIcon,
-      },
-      {
-        name: 'Express.js',
-        icon: ExpressJsIcon,
-      },
-      {
-        name: 'MongoDB',
-        icon: MongoDbIcon,
-      },
-      {
-        name: 'Handlebars',
-        icon: HandlebarsIcon,
-      },
-      {
-        name: 'JavaScript',
-        icon: JSIcon,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Icon,
-      },
-      {
-        name: 'GitHub',
-        icon: GithubIcon,
-      },
-    ],
+    tech: [NodeJS, ExpressJS, MongoDB, Handlebars, JavaScript, CSS, GitHub],
   },
   {
     name: 'Gotta Win Em All',
@@ -261,23 +132,6 @@ export const projects: Project[] = [
       },
     ],
     img: '/gotta-win-em-all.png',
-    tech: [
-      {
-        name: 'HTML',
-        icon: Html5Icon,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Icon,
-      },
-      {
-        name: 'JavaScript',
-        icon: JSIcon,
-      },
-      {
-        name: 'GitHub',
-        icon: GithubIcon,
-      },
-    ],
+    tech: [HTML, CSS, JavaScript, GitHub],
   },
 ]

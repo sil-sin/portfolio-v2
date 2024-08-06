@@ -33,131 +33,36 @@ import {
   JestIcon,
 } from '@/components/techIcons'
 
-const technology = [
-  {
-    name: 'HTML',
-    icon: Html5Icon,
-  },
-  {
-    name: 'CSS',
-    icon: Css3Icon,
-  },
-  {
-    name: 'JavaScript',
-    icon: JSIcon,
-  },
-  {
-    name: 'TypeScript',
-    icon: TypeScriptIcon,
-  },
-  {
-    name: 'ReactJS',
-    icon: ReactIcon,
-  },
-  {
-    name: 'NextJS',
-    icon: NextJSIcon,
-  },
-  {
-    name: 'TailwindCSS',
-    icon: TailwindCSSIcon,
-  },
-  {
-    name: 'NodeJS',
-    icon: NodeJSIcon,
-  },
-  {
-    name: 'GO',
-    icon: GoIcon,
-  },
-  {
-    name: 'GraphQL',
-    icon: GraphQLIcon,
-  },
-  {
-    name: 'MongoDB',
-    icon: MongoDbIcon,
-  },
-  {
-    name: 'AWS',
-    icon: AWSIcon,
-  },
-  {
-    name: 'Turborepo',
-    icon: TurborepoIcon,
-  },
-  {
-    name: 'Vercel',
-    icon: VercelIcon,
-  },
-  {
-    name: 'Jest',
-    icon: JestIcon,
-  },
-  {
-    name: 'Vitest',
-    icon: VitestIcon,
-  },
-  {
-    name: 'Cypress',
-    icon: CypressIcon,
-  },
-  {
-    name: 'Contentful',
-    icon: ContentfulIcon,
-  },
-  {
-    name: 'Storyblok',
-    icon: StoryblokIcon,
-  },
-  {
-    name: 'Wordpress',
-    icon: WordpressIcon,
-  },
-  {
-    name: 'Storybook',
-    icon: StorybookIcon,
-  },
-  {
-    name: 'RudderStack',
-    icon: RudderStackIcon,
-  },
-  {
-    name: 'Mixpanel',
-    icon: MixpanelIcon,
-  },
-  {
-    name: 'Voucherify',
-    icon: VoucherifyIcon,
-  },
-  {
-    name: 'Material UI',
-    icon: MaterialUIIcon,
-  },
-  {
-    name: 'NextUI',
-    icon: NextUILogo,
-  },
-  {
-    name: 'Bootstrap',
-    icon: BootstrapIcon,
-  },
-  {
-    name: 'Express.js',
-    icon: ExpressJsIcon,
-  },
-  {
-    name: 'Google Cloud',
-    icon: GoogleCloudIcon,
-  },
-  {
-    name: 'Handlebars',
-    icon: HandlebarsIcon,
-  },
-  {
-    name: 'GitHub',
-    icon: GithubIcon,
-  },
-]
-
-export default technology
+export const technology = {
+  HTML: { name: 'HTML', icon: Html5Icon },
+  CSS: { name: 'CSS', icon: Css3Icon },
+  JavaScript: { name: 'JavaScript', icon: JSIcon },
+  TypeScript: { name: 'TypeScript', icon: TypeScriptIcon },
+  ReactJS: { name: 'ReactJS', icon: ReactIcon },
+  NextJS: { name: 'NextJS', icon: NextJSIcon },
+  TailwindCSS: { name: 'TailwindCSS', icon: TailwindCSSIcon },
+  NodeJS: { name: 'NodeJS', icon: NodeJSIcon },
+  GO: { name: 'GO', icon: GoIcon },
+  GraphQL: { name: 'GraphQL', icon: GraphQLIcon },
+  MongoDB: { name: 'MongoDB', icon: MongoDbIcon },
+  AWS: { name: 'AWS', icon: AWSIcon },
+  Turborepo: { name: 'Turborepo', icon: TurborepoIcon },
+  Vercel: { name: 'Vercel', icon: VercelIcon },
+  Jest: { name: 'Jest', icon: JestIcon },
+  Vitest: { name: 'Vitest', icon: VitestIcon },
+  Cypress: { name: 'Cypress', icon: CypressIcon },
+  Contentful: { name: 'Contentful', icon: ContentfulIcon },
+  Storyblok: { name: 'Storyblok', icon: StoryblokIcon },
+  Wordpress: { name: 'Wordpress', icon: WordpressIcon },
+  Storybook: { name: 'Storybook', icon: StorybookIcon },
+  RudderStack: { name: 'RudderStack', icon: RudderStackIcon },
+  Mixpanel: { name: 'Mixpanel', icon: MixpanelIcon },
+  Voucherify: { name: 'Voucherify', icon: VoucherifyIcon },
+  MaterialUI: { name: 'Material UI', icon: MaterialUIIcon },
+  NextUI: { name: 'NextUI', icon: NextUILogo },
+  Bootstrap: { name: 'Bootstrap', icon: BootstrapIcon },
+  ExpressJS: { name: 'Express.js', icon: ExpressJsIcon },
+  GoogleCloud: { name: 'Google Cloud', icon: GoogleCloudIcon },
+  Handlebars: { name: 'Handlebars', icon: HandlebarsIcon },
+  GitHub: { name: 'GitHub', icon: GithubIcon },
+}
