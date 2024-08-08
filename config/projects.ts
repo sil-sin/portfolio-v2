@@ -30,7 +30,7 @@ export const projects: Project[] = [
     githubRepos: [
       { name: 'Github Repo', link: 'https://github.com/sil-sin/discoverberat' },
     ],
-    img: '/discover-berat.png',
+    img: '',
     tech: [
       ReactJS,
       NextJS,
@@ -63,7 +63,7 @@ export const projects: Project[] = [
         link: 'https://github.com/sil-sin/babyshower-db',
       },
     ],
-    img: '/silvisinanaj.png',
+    img: '',
     tech: [
       ReactJS,
       JavaScript,
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     githubRepos: [
       { name: 'Github Repo', link: 'https://github.com/sil-sin/Portfolio' },
     ],
-    img: '/silvisinanaj.png',
+    img: '',
     tech: [ReactJS, MaterialUI, JavaScript, CSS, Vercel, GitHub],
   },
   {
@@ -100,7 +100,7 @@ export const projects: Project[] = [
         link: 'https://github.com/jnmelio/FoodCafe-server',
       },
     ],
-    img: '/foodcafe.png',
+    img: '',
     tech: [
       ReactJS,
       MaterialUI,

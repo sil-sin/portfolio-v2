@@ -1,7 +1,7 @@
 'use client'
 
 import { FC } from 'react'
-import { Card, CardHeader, CardBody } from '@nextui-org/react'
+import { Card, CardHeader, CardBody, Image } from '@nextui-org/react' // Import the Image component from the appropriate package
 import { Link } from '@nextui-org/link'
 
 import { AnchorIcon } from '../icons'
@@ -39,28 +39,20 @@ const ProjectCard: FC<Props> = ({
 }) => {
   return (
     <Card className={sizeClasses[size]}>
-      <CardHeader className='pb-0 pt-2 px-4 flex-col gap-1 items-start min-h-16'>
+      <CardHeader className='pb-0 pt-2 px-8 flex-col gap-2 items-center min-h-16'>
         <Link
           className='text-lg dark:text-white text-black flex items-center'
           href={link}
           rel='noopener noreferrer'
           target='_blank'
         >
-          <h4 className='font-bold text-large flex'>{title}</h4>
+          <h3 className='font-bold  text-large flex'>{title}</h3>
           <AnchorIcon />
         </Link>
-        {image && (
-          <img
-            alt={title + ' project image'}
-            className='w-full my-2'
-            src={image}
-          />
-        )}
-        {description && <p className='text-sm mb-2'>{description}</p>}
         {alternativeLink && (
           <sub>
             <Link
-              className='font-bold text-xs flex items-center'
+              className='font-bold text-xs flex items-center mb-8'
               color='warning'
               href={alternativeLink}
               rel='noopener noreferrer'
@@ -71,27 +63,39 @@ const ProjectCard: FC<Props> = ({
             </Link>
           </sub>
         )}
+        {image && (
+          <Image
+            alt={title + ' project image'}
+            className='w-full mx-auto my-4 md:max-w-xl'
+            src={image}
+          />
+        )}
+        {description && <p className='text-sm mb-2 max-w-xl'>{description}</p>}
       </CardHeader>
-      <CardBody className='py-2 px-4'>
+      <CardBody className='flex flex-col gap-6 px-8'>
         <div className='flex flex-wrap gap-2'>
           {tech?.map(({ name, icon }) => (
             <ProjectTechPill key={name} icon={icon} techName={name} />
           ))}
         </div>
+
+        <div className='py-2 w-full flex flex-col gap-2'>
+          <h4 className='font-bold'>Github Repositories</h4>
+          <div className='flex flex-wrap gap-2'>
+            {githubRepos?.map(({ name, link }) => (
+              <Link
+                key={link}
+                className='text-sm font-bold flex items-center'
+                href={link}
+                target='_blank'
+              >
+                {name}
+                <AnchorIcon />
+              </Link>
+            ))}
+          </div>
+        </div>
       </CardBody>
-      <div className='py-2 px-4 flex flex-col'>
-        {githubRepos?.map(({ name, link }) => (
-          <Link
-            key={link}
-            className='text-sm font-bold flex items-center'
-            href={link}
-            target='_blank'
-          >
-            {name}
-            <AnchorIcon />
-          </Link>
-        ))}
-      </div>
     </Card>
   )
 }
