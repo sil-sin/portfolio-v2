@@ -20,7 +20,7 @@ export default function Home() {
       >
         Projects
       </h2>
-      <div className='w-vw-100 max-w-6xl grid grid-cols-1 gap-10 sm:grid-cols-2 mx-auto lg:grid-cols-3  '>
+      <div className='w-vw-100 max-w-6xl grid grid-cols-1 gap-10 sm:grid-cols-2 mx-auto lg:grid-cols-3 mb-20'>
         {projects.map((project, index) => (
           <ProjectCard
             key={index}

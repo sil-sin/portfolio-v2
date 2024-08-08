@@ -24,6 +24,7 @@ export const Hero = () => {
         <Snippet
           hideCopyButton
           className='flex text-wrap flex-wrap align-end  justify-center text-center'
+          symbol='</>'
           variant='solid'
         >
           <span className='text-lg text-wrap '>
