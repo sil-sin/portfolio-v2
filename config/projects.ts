@@ -30,7 +30,7 @@ export const projects: Project[] = [
     githubRepos: [
       { name: 'Github Repo', link: 'https://github.com/sil-sin/discoverberat' },
     ],
-    img: '/discover-berat.png',
+    img: '',
     tech: [
       ReactJS,
       NextJS,
@@ -63,7 +63,7 @@ export const projects: Project[] = [
         link: 'https://github.com/sil-sin/babyshower-db',
       },
     ],
-    img: '/silvisinanaj.png',
+    img: '',
     tech: [
       ReactJS,
       JavaScript,
@@ -83,21 +83,24 @@ export const projects: Project[] = [
     githubRepos: [
       { name: 'Github Repo', link: 'https://github.com/sil-sin/Portfolio' },
     ],
-    img: '/silvisinanaj.png',
+    img: '',
     tech: [ReactJS, MaterialUI, JavaScript, CSS, Vercel, GitHub],
   },
   {
     name: 'FoodCafé',
     description: `This is the final project of my Bootcamp. FoodCafe is a full-stack web app. It's a cozy environment for people to connect around the common interest of food. Users can create their profile, find, create, edit, or delete recipes, and post about their food.`,
-    link: 'https://silver-tasker.onrender.com/',
+    link: 'https://food-cafe.herokuapp.com/',
     githubRepos: [
-      { name: 'Client Repo', link: 'https://github.com/sil-sin/Silver-Tasker' },
+      {
+        name: 'Client Repo',
+        link: 'https://github.com/jnmelio/FoodCafe-client',
+      },
       {
         name: 'Server Repo',
         link: 'https://github.com/jnmelio/FoodCafe-server',
       },
     ],
-    img: '/foodcafe.png',
+    img: '',
     tech: [
       ReactJS,
       MaterialUI,
