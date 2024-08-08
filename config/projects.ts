@@ -89,9 +89,12 @@ export const projects: Project[] = [
   {
     name: 'FoodCafé',
     description: `This is the final project of my Bootcamp. FoodCafe is a full-stack web app. It's a cozy environment for people to connect around the common interest of food. Users can create their profile, find, create, edit, or delete recipes, and post about their food.`,
-    link: 'https://silver-tasker.onrender.com/',
+    link: 'https://food-cafe.herokuapp.com/',
     githubRepos: [
-      { name: 'Client Repo', link: 'https://github.com/sil-sin/Silver-Tasker' },
+      {
+        name: 'Client Repo',
+        link: 'https://github.com/jnmelio/FoodCafe-client',
+      },
       {
         name: 'Server Repo',
         link: 'https://github.com/jnmelio/FoodCafe-server',
