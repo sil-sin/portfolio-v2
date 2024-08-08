@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10 w-full '>
       <Hero />
-      <h3
+      <h2
         className={subtitle({
           className: 'text-center',
           color: 'foreground',
@@ -19,16 +19,15 @@ export default function Home() {
         })}
       >
         Projects
-      </h3>
-      <div className='w-vw-100 max-w-6xl grid grid-cols-1 gap-10 sm:grid-cols-2 mx-auto lg:grid-cols-3  '>
+      </h2>
+      <div className='w-vw-100 max-w-6xl grid grid-cols-1 gap-10 sm:grid-cols-2 mx-auto lg:grid-cols-3 mb-20'>
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
             alternativeLink={project.alternativeLink}
-            description={project.description}
             githubRepos={project.githubRepos}
-            image={project.img}
-            projectUrl={project.link}
+            link={project.link}
+            size='sm'
             tech={project.tech}
             title={project.name}
           />

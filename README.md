@@ -1,53 +1,39 @@
-# Personal Portfolio build with Next.js & NextUI
+# Personal Portfolio Built with Next.js & NextUI
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+Welcome to my personal portfolio! This project is a showcase of my work and experience, built using the latest technologies and tools. It leverages Next.js 14 (app directory) and NextUI (v2) to deliver a modern and performant web application.
 
 [Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
 
+## About Me
+
+Hi, I’m Silvi Sinanaj, a Full-Stack Web Developer based in Germany. I specialize in creating interactive and user-friendly web experiences. My expertise includes front-end technologies such as TypeScript, HTML5, CSS/Sass, React, and Next.js, as well as back-end technologies and cloud services.
+
+This portfolio not only highlights my work but also demonstrates my skills in integrating Firebase for dynamic data management and real-time capabilities.
+
 ## Technologies Used
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- [Next.js 14](https://nextjs.org/docs/getting-started): A React framework for building modern web applications.
+- [NextUI v2](https://nextui.org/): A customizable React UI library.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework.
+- [Tailwind Variants](https://tailwind-variants.org): A utility to manage Tailwind CSS variants.
+- [TypeScript](https://www.typescriptlang.org/): A typed superset of JavaScript that compiles to plain JavaScript.
+- [Framer Motion](https://www.framer.com/motion/): A library for creating animations in React.
+- [next-themes](https://github.com/pacocoursey/next-themes): A utility for managing light and dark themes in Next.js.
+- [Firebase](https://firebase.google.com/): Used for real-time data management and authentication.
+
+## Features
+
+- **Dynamic Data**: Integrated Firebase Firestore to fetch and manage data dynamically. This enables real-time updates and seamless content management.
+- **Responsive Design**: Built with Tailwind CSS and NextUI for a responsive and visually appealing layout.
+- **Interactive UI**: Enhanced user experience with Framer Motion animations and NextUI components.
+- **Theme Management**: Supports both light and dark themes using `next-themes`.
 
 ## How to Use
 
-### Use the template with create-next-app
+### Use the Template with Create-Next-App
 
 To create a new project based on this template using `create-next-app`, run the following command:
 
 ```bash
 npx create-next-app -e https://github.com/nextui-org/next-app-template
 ```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).

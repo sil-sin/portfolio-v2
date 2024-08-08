@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
   name: 'Silvi Sinanaj',
-  description: "Silvi Sinanaj's personal website.",
+  description: "Silvi Sinanaj's personal portfolio.",
   navItems: [
     {
       label: 'Home',
@@ -11,10 +11,6 @@ export const siteConfig = {
     {
       label: 'Projects',
       href: '/projects',
-    },
-    {
-      label: 'Contact',
-      href: '/contact',
     },
     // Todo Add blog once have enough content to make it public{
     //   label: 'Blog',
@@ -25,6 +21,7 @@ export const siteConfig = {
       href: '/about',
     },
   ],
+
   links: {
     github: 'https://github.com/sil-sin',
     linkedin: 'https://www.linkedin.com/in/silvisinanaj/',

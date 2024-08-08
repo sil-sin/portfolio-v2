@@ -1,52 +1,74 @@
 'use client'
-import { Card, CardHeader, CardBody, Spacer, Button } from '@nextui-org/react'
+
+import { Spacer, Button } from '@nextui-org/react'
+import { Snippet } from '@nextui-org/snippet'
+import { useState, useEffect } from 'react'
+
+interface TextData {
+  firstParagraph?: string
+  secondParagraph?: string
+  thirdParagraph?: string
+  fourthParagraph?: string
+}
 
 export default function About() {
+  const [textData, setTextData] = useState<TextData>({})
+
+  useEffect(() => {
+    const fetchFirestoreData = async () => {
+      try {
+        const response = await fetch('/api/about')
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch data')
+        }
+        const data = await response.json()
+
+        setTextData(data)
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      }
+    }
+
+    fetchFirestoreData()
+  }, [])
+
+  if (!textData) return null
+
+  const { firstParagraph, secondParagraph, thirdParagraph, fourthParagraph } =
+    textData
+
+  const email = 'sinanajsilvi@gmail.com'
+
   return (
-    <div className='p-2'>
+    <div className='p-2 max-w-4xl mx-auto'>
       <h1 className='text-4xl mb-4 text-center'>About Me</h1>
-      <p className='text-lg mb-8 text-center'>
-        Hi, I&apos;m Silvi Sinanaj, a passionate and dedicated individual
-        committed to delivering high-quality work.
-      </p>
+      <p
+        dangerouslySetInnerHTML={{ __html: firstParagraph || '' }}
+        className='text-lg mb-8 text-center'
+      />
+      <p
+        dangerouslySetInnerHTML={{ __html: secondParagraph || '' }}
+        className='text-lg mb-8 text-center'
+      />
+      <p
+        dangerouslySetInnerHTML={{ __html: thirdParagraph || '' }}
+        className='text-lg mb-8 text-center'
+      />
+      <p
+        dangerouslySetInnerHTML={{ __html: fourthParagraph || '' }}
+        className='text-lg mb-8 text-center'
+      />{' '}
       <div className='flex flex-col items-center'>
-        <Card className='mb-4 max-w-md'>
-          <CardHeader>
-            <h2 className='text-2xl mb-2'>My Mission</h2>
-          </CardHeader>
-          <CardBody>
-            <p>
-              My mission is to leverage my skills and knowledge to provide
-              exceptional service and create meaningful experiences.
-            </p>
-          </CardBody>
-        </Card>
-        <Spacer y={1} />
-        <Card className='mb-4 max-w-md'>
-          <CardHeader>
-            <h2 className='text-2xl mb-2'>My Vision</h2>
-          </CardHeader>
-          <CardBody>
-            <p>
-              My vision is to continuously grow and innovate, making a positive
-              impact in my field and beyond.
-            </p>
-          </CardBody>
-        </Card>
-        <Spacer y={1} />
-        <Card className='max-w-md'>
-          <CardHeader>
-            <h2 className='text-2xl mb-2'>My Values</h2>
-          </CardHeader>
-          <CardBody>
-            <p>
-              I value integrity, excellence, and perseverance. I believe in
-              always striving for the best and being true to myself and others.
-            </p>
-          </CardBody>
-        </Card>
+        <p className='text-lg'>
+          Feel free to contact me and/or download my resume
+        </p>
         <Spacer y={2} />
-        <a download href='/resume.pdf'>
+        <div className='flex items-center justify-between'>
+          <Snippet>{email}</Snippet>
+        </div>
+        <Spacer y={2} />
+        <a download href='/silvi-sinanaj-resume.pdf'>
           <Button color='primary'>Download Resume</Button>
         </a>
       </div>
