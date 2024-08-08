@@ -21,7 +21,7 @@ type Props = {
   size?: 'sm' | 'md' | 'lg'
 }
 
-const sizeClasses = {
+const sizeCardClasses = {
   sm: 'py-4 sm:w-60 w-full gap-4 sm:mx-auto',
   md: 'py-6 sm:w-80 w-full gap-6 sm:mx-auto',
   lg: 'py-8  w-full gap-8 sm:mx-auto',
@@ -38,8 +38,14 @@ const ProjectCard: FC<Props> = ({
   size = 'md',
 }) => {
   return (
-    <Card className={sizeClasses[size]}>
-      <CardHeader className='pb-0 pt-2 px-8 flex-col gap-2 items-center min-h-16'>
+    <Card className={sizeCardClasses[size]}>
+      <CardHeader
+        className={
+          size === 'lg'
+            ? 'pb-0 pt-2 px-8 flex-col gap-2 items-center min-h-16'
+            : 'pb-0 pt-2 px-4 flex-col gap-1 items-start min-h-16'
+        }
+      >
         <Link
           className='text-lg dark:text-white text-black flex items-center'
           href={link}
@@ -72,16 +78,42 @@ const ProjectCard: FC<Props> = ({
         )}
         {description && <p className='text-sm mb-2 max-w-xl'>{description}</p>}
       </CardHeader>
-      <CardBody className='flex flex-col gap-6 px-8'>
-        <div className='flex flex-wrap gap-2'>
-          {tech?.map(({ name, icon }) => (
-            <ProjectTechPill key={name} icon={icon} techName={name} />
-          ))}
-        </div>
-
-        <div className='py-2 w-full flex flex-col gap-2'>
-          <h4 className='font-bold'>Github Repositories</h4>
+      {size === 'lg' && (
+        <CardBody className='flex flex-col gap-6 px-8'>
           <div className='flex flex-wrap gap-2'>
+            {tech?.map(({ name, icon }) => (
+              <ProjectTechPill key={name} icon={icon} techName={name} />
+            ))}
+          </div>
+
+          <div className='py-2 w-full flex flex-col gap-2'>
+            <h4 className='font-bold'>Github Repositories</h4>
+            <div className='flex flex-wrap gap-2'>
+              {githubRepos?.map(({ name, link }) => (
+                <Link
+                  key={link}
+                  className='text-sm font-bold flex items-center'
+                  href={link}
+                  target='_blank'
+                >
+                  {name}
+                  <AnchorIcon />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </CardBody>
+      )}
+      {size === 'sm' && (
+        <>
+          <CardBody className='py-2 px-4'>
+            <div className='flex flex-wrap gap-2'>
+              {tech?.map(({ name, icon }) => (
+                <ProjectTechPill key={name} icon={icon} techName={name} />
+              ))}
+            </div>
+          </CardBody>
+          <div className='py-2 px-4 flex flex-col'>
             {githubRepos?.map(({ name, link }) => (
               <Link
                 key={link}
@@ -94,8 +126,8 @@ const ProjectCard: FC<Props> = ({
               </Link>
             ))}
           </div>
-        </div>
-      </CardBody>
+        </>
+      )}
     </Card>
   )
 }
