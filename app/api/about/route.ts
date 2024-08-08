@@ -24,8 +24,6 @@ export async function GET() {
       return NextResponse.json({ error: 'No such document!' }, { status: 404 })
     }
   } catch (error) {
-    console.log('Firestore error:', error)
-
     return NextResponse.json(
       { error: (error as Error).message },
       { status: 500 }
