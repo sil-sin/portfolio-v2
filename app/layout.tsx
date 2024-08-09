@@ -34,6 +34,10 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang='en'>
+      <meta
+        content='272Vtgtxb9mKg_KrywL8Nx3_Bev_AnG-l1elSIJrVHg'
+        name='google-site-verification'
+      />
       <head />
       <body
         className={clsx('min-h-screen bg-background font-sans antialiased')}
