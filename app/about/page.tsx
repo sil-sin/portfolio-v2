@@ -68,7 +68,7 @@ export default function About() {
           <Snippet>{email}</Snippet>
         </div>
         <Spacer y={2} />
-        <a download href='/silvi-sinanaj-resume.pdf'>
+        <a download href='/Silvi_Sinanaj_SE_Resume.pdf'>
           <Button color='primary'>Download Resume</Button>
         </a>
       </div>
