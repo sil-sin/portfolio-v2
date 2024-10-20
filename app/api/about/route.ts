@@ -5,7 +5,9 @@ import { db } from '@/config/firebase'
 
 let cachedData: any = null
 let cacheTime = 0
-const CACHE_DURATION = 2 * 60 * 60 * 1000 // 2 hours in milliseconds
+
+const CACHE_DURATION = 24 * 60 * 60 * 1000 // 24 hours in milliseconds
+
 
 export async function GET() {
   const collection = process.env.NEXT_PUBLIC_FIRESTORE_COLLECTION
@@ -24,7 +26,8 @@ export async function GET() {
 
     return NextResponse.json(cachedData, {
       headers: {
-        'Cache-Control': 'public, s-maxage=7200, stale-while-revalidate=3600',
+
+        'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=43200',
       },
     })
   }
@@ -42,7 +45,10 @@ export async function GET() {
 
       const response = NextResponse.json(data, {
         headers: {
-          'Cache-Control': 'public, s-maxage=7200, stale-while-revalidate=3600',
+
+          'Cache-Control':
+            'public, s-maxage=86400, stale-while-revalidate=43200',
+
         },
       })
 
@@ -58,4 +64,6 @@ export async function GET() {
   }
 }
 
-export const revalidate = 7200 // 2 hours in seconds
+
+export const revalidate = 86400 // 24 hours in seconds
+  
