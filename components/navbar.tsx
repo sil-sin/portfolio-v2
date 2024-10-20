@@ -13,17 +13,29 @@ import { Link } from '@nextui-org/link'
 import { link as linkStyles } from '@nextui-org/theme'
 import NextLink from 'next/link'
 import clsx from 'clsx'
-import { usePathname } from 'next/navigation' // Import usePathname hook
+import { usePathname } from 'next/navigation'
+import { useState } from 'react' // Import useState
 
 import { siteConfig } from '@/config/site'
 import { ThemeSwitch } from '@/components/themeSwitch'
 import { GithubIcon, LinkedInIcon, Logo } from '@/components/icons'
 
 export const Navbar = () => {
-  const pathname = usePathname() // Get the current pathname
+  const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false) // Add state for menu
+
+  // Function to close the menu
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
 
   return (
-    <NextUINavbar maxWidth='xl' position='sticky'>
+    <NextUINavbar
+      isMenuOpen={isMenuOpen}
+      maxWidth='xl'
+      position='sticky'
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
         <NavbarBrand as='li' className='gap-3 max-w-fit'>
           <NextLink className='cursor-pointer' href='/'>
@@ -72,7 +84,12 @@ export const Navbar = () => {
         <div className='mx-4 mt-2 flex flex-col gap-2'>
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link color='foreground' href={item.href} size='lg'>
+              <Link
+                color='foreground'
+                href={item.href}
+                size='lg'
+                onClick={closeMenu} // Add onClick handler to close menu
+              >
                 {item.label}
               </Link>
             </NavbarMenuItem>
