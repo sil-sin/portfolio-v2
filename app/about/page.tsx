@@ -1,4 +1,5 @@
-import AboutComponent from './about'
+import AboutComponent from '../../components/about'
+
 
 import { getAbout } from '@/actions/about'
 
