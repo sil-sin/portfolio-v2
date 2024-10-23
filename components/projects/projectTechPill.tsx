@@ -20,7 +20,7 @@ export const ProjectTechPill: FC<Props> = ({
     <>
       <MyChip
         className={variant === 'faded' ? 'animate-fade-in' : ''}
-        color='warning'
+        color='default'
         size={size}
         startContent={
           <Icon alt={techName} area-label={techName} size={iconSize} />
