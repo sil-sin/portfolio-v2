@@ -20,14 +20,13 @@ export const ProjectTechPill: FC<Props> = ({
     <>
       <MyChip
         className={variant === 'faded' ? 'animate-fade-in' : ''}
-        color='default'
         size={size}
         startContent={
           <Icon alt={techName} area-label={techName} size={iconSize} />
         }
         variant={variant}
       >
-        <small className='text-default-500 '>{techName}</small>
+        <small className='text-default-1000'>{techName}</small>
       </MyChip>
     </>
   )
