@@ -22,7 +22,10 @@ export const TechnologyBar: FC = () => {
         >
           Technologies I work with
         </h3>
-        <Button onClick={() => setIsShowAsList(!isShowAsList)}>
+        <Button
+          className='dark:bg-transparent dark:text-slate-50  dark:border-gray-100 dark:border-2 dark:border-opacity-100 bg-slate-50 text-slate-800 min-w-60  border-gray-600 border-2 border-opacity-50 rounded-full'
+          onClick={() => setIsShowAsList(!isShowAsList)}
+        >
           {isShowAsList ? 'Show animation' : 'Show as List'}
         </Button>
       </div>
