@@ -1,13 +1,21 @@
 'use client'
 
-import { Spacer, Button } from '@nextui-org/react'
-import { Snippet } from '@nextui-org/snippet'
+import { Spacer, Button } from "@heroui/react"
+import { Snippet } from "@heroui/snippet"
 
 import { TextData } from '@/actions/about'
 
-export default function AboutComponent({ textData }: { textData: TextData }) {
-  const { firstParagraph, secondParagraph, thirdParagraph, fourthParagraph } =
-    textData
+export default function AboutComponent({
+  textData,
+}: {
+  textData?: TextData | null
+}) {
+  const {
+    firstParagraph = '',
+    secondParagraph = '',
+    thirdParagraph = '',
+    fourthParagraph = '',
+  } = textData ?? {}
 
   const email = 'sinanajsilvi@gmail.com'
 

@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-import { Button } from '@nextui-org/react'
+import { Button } from "@heroui/react"
 
 import { subtitle } from './primitives'
 import { ProjectTechPill } from './projects/projectTechPill'
@@ -36,7 +36,16 @@ export const TechnologyBar: FC = () => {
               key={name}
               className='flex items-center justify-start gap-3 w-1/2'
             >
-              <span>{icon({ size: 24 })}</span>
+              <span>
+                {typeof icon === 'function'
+                  ? (() => {
+                      const result = icon({ size: 24 });
+                      // If result is a Promise, render nothing or a fallback
+                      if (result instanceof Promise) return null;
+                      return result;
+                    })()
+                  : icon}
+              </span>
               {name}
             </li>
           ))}

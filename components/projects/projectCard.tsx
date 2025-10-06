@@ -1,8 +1,8 @@
 'use client'
 
 import { FC } from 'react'
-import { Card, CardHeader, CardBody, Image } from '@nextui-org/react' // Import the Image component from the appropriate package
-import { Link } from '@nextui-org/link'
+import { Card, CardHeader, CardBody, Image } from "@heroui/react" // Import the Image component from the appropriate package
+import { Link } from "@heroui/link"
 
 import { AnchorIcon } from '../icons'
 

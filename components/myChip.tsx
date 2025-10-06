@@ -1,4 +1,4 @@
-import { extendVariants, Chip } from '@nextui-org/react'
+import { extendVariants, Chip } from "@heroui/react"
 
 export const MyChip = extendVariants(Chip, {
   variants: {
