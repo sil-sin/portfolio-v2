@@ -1,7 +1,7 @@
 'use client'
 
-import { Spacer, Button } from '@nextui-org/react'
-import { Snippet } from '@nextui-org/snippet'
+import { Spacer, Button } from "@heroui/react"
+import { Snippet } from "@heroui/snippet"
 
 import { TextData } from '@/actions/about'
 

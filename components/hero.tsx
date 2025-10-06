@@ -1,7 +1,7 @@
-import { Code } from '@nextui-org/code'
-import { Snippet } from '@nextui-org/snippet'
-import { Link } from '@nextui-org/link'
-import { button as buttonStyles } from '@nextui-org/theme'
+import { Code } from "@heroui/code"
+import { Snippet } from "@heroui/snippet"
+import { Link } from "@heroui/link"
+import { button as buttonStyles } from "@heroui/theme"
 
 import { GithubIcon } from './icons'
 import Background from './background'
